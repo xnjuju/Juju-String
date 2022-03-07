@@ -1,0 +1,56 @@
+{
+  "name": "Pyrogram String Session Generator",
+  "description": "Telegram bot to generate pyrogram string session",
+  "logo": "https://telegra.ph/file/ff0b3d2a6590cda2f29eb.jpg",
+  "keywords": [
+    "telegram",
+    "bot",
+    "python",
+    "pyrogram"
+  ],
+    "buildpacks": [{
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+      {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+   ],
+  "repository": "https://github.com/xnjuju/Juju-String",
+  "env": {
+    "ENVIRONMENT": {
+      "description": "Jangan Merubah ANYTHING.",
+      "required": true,
+      "value": "ANYTHING"
+    },
+    "API_ID": {
+      "description": "Dapatkan API ID di my.telegram.org.",
+      "required": true,
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Dapatkan API Hash di my.telegram.org.",
+      "required": true,
+      "value": ""
+    },
+    "BOT_TOKEN": {
+      "description": "Buat Bot di @BotFather Masukan BOT tokennya disini",
+      "required": true,
+      "value": ""
+    },
+    "MUST_JOIN": {
+      "description": "Tambahkan Nama Pengguna/ID Channel/Grup",
+      "required": false,
+      "value": ""
+    }
+  }
+}
